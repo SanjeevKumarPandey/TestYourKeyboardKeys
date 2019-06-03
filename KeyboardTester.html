@@ -1,0 +1,39 @@
+<head>
+	<style type="text/css">
+		body {
+    		font: 14px "Century Gothic", Futura, sans-serif;
+    		margin: 20px;
+  		}
+		.tb {
+			box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+  			z-index: 3;
+  		}
+
+		input[type="text"] {
+			width: 100%;
+		}
+
+		.wrapper {
+			margin-right: auto; /* 1 */
+  			margin-left:  auto; /* 1 */
+  			max-width: 960px; /* 2 */
+  			padding-right: 10px; /* 3 */
+  			padding-left:  10px; /* 3 */
+			overflow-wrap: break-word;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<h3>Keyoard-Checker</h3>
+<input type="text" name="keystrokes"><br>
+<hr>
+<div id="keyiput" class="wrapper">
+</div>
+<script>
+$('input').keyup(function() { 
+var i = $(this); // current input -- console.log(event.which);
+document.getElementById("keyiput").innerHTML+=event.which+",";
+});
+</script>
+</body>
